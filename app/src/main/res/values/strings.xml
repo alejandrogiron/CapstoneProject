@@ -8,6 +8,24 @@
     <string name="err_msg_username">Enter valid a username</string>
     <string name="err_msg_password">Enter the password</string>
     <string name="title_activity_forgot_password">ForgotPasswordActivity</string>
+    <string name="action_settings">Settings</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="tv_forgot_password_username">Please enter your username below</string>
+    <string name="tv_forgot_password_secret_question">What City Were You Born In?</string>
+    <string name="secret_question">Secret Question</string>
+    <string name="design_image_title">First Tshirt Design</string>
+    <string name="carrierId">Carrier ID</string>
+    <string name="carrierName">CarrierName</string>
+    <string name="TrackingURLPrefix">TrackingURLPrefix</string>
+    <string name="OrderId">Order ID</string>
+    <string name="designID">Design ID</string>
+    <string name="userID">User ID</string>
+    <string name="PONumber">Part Number</string>
+    <string name="dueDate">Due Date</string>
+    <string name="notes">Notes</string>
+    <string name="approvedStatus">Approved Status</string>
 
 
 </resources>

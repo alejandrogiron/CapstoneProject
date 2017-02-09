@@ -9,6 +9,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".LoginActivity">
+            android:name="com.example.NonActionBarActivity"
+            android:theme="@style/AppTheme.NoActionBar"
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -19,7 +21,10 @@
         <activity
             android:name=".ForgotPasswordActivity"
             android:label="@string/title_activity_forgot_password"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme" />
+
+        <activity android:name=".ApprovalActivity" />
+
     </application>
 
 </manifest>
