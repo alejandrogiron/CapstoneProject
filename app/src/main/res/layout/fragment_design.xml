@@ -1,27 +1,12 @@
-<android.support.design.widget.CoordinatorLayout
-    android:id="@+id/main_content"
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
 
-    <android.support.design.widget.FloatingActionButton
-        android:id="@+id/fab"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="35dp"
-        android:clickable="true"
-        android:src="@drawable/ic_check_black_35dp"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_gravity="end"
-        android:padding="10dp" />
-
     <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
 
     <TextView
         android:id="@+id/design_image_title"
@@ -37,10 +22,116 @@
         android:layout_height="wrap_content"
         android:src="@drawable/tshirt"
         android:layout_below="@id/design_image_title"
-        android:layout_centerHorizontal="true"
+        android:layout_margin="35dp"
+        android:layout_centerHorizontal="true" />
 
-        android:layout_margin="35dp" />
+        <TextView
+            android:id="@+id/label_design_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/design_image"
+            android:text="@string/design_id"
+            android:layout_marginStart="35dp"
+            />
+            <TextView
+                android:text="0123456789"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView4"
+                android:layout_below="@+id/design_image"
+                android:layout_toEndOf="@+id/label_design_number" />
+
+        <TextView
+            android:id="@+id/label_design_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/label_design_number"
+            android:text="@string/design_name"
+            android:layout_marginStart="35dp"
+            />
+            <TextView
+                android:text="Vertical Vintage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/label_design_name"
+                android:layout_toEndOf="@+id/label_design_name"
+                android:id="@+id/textView5" />
+
+        <TextView
+            android:id="@+id/label_version_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/label_design_name"
+            android:text="@string/version_number"
+            android:layout_marginStart="35dp"
+            />
+            <TextView
+                android:text="0123456789"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/label_version_name"
+                android:layout_toEndOf="@+id/label_version_number"
+                android:id="@+id/textView6" />
+
+        <TextView
+            android:id="@+id/label_version_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/label_version_number"
+            android:text="@string/version_name"
+            android:layout_marginStart="35dp"
+            />
+
+
+
+        <TextView
+            android:text="Vertical Vintage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/label_version_name"
+            android:layout_toEndOf="@+id/label_version_name"
+            android:id="@+id/textView7" />
 
     </RelativeLayout>
 
-</android.support.design.widget.CoordinatorLayout>
+
+    <!--========================FAB=========================-->
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:fabSize="normal"
+        app:borderWidth="0dp"
+        android:src="@drawable/ic_check_black_35dp"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="50dp"
+        android:layout_alignParentEnd="true" />
+
+    <!--==========invis toolbar at bottom===================-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:visibility="invisible">
+
+        <ImageView
+            android:id="@+id/one"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_check_black_35dp"/>
+
+        <ImageView
+            android:id="@+id/two"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_clear_black_24dp"/>
+
+    </LinearLayout>
+
+</RelativeLayout>
