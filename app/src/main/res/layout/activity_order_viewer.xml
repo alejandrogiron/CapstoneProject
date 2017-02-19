@@ -1,22 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-
-<ScrollView
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:card_view="http://schemas.android.com/apk/res-auto"
-    android:layout_height="match_parent"
-    android:layout_width="match_parent"
-    >
-
-    <LinearLayout
+ <LinearLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:card_view="http://schemas.android.com/apk/res-auto"
-        xmlns:app="http://schemas.android.com/tools"
-        xmlns:tools="http://schemas.android.com/tools"
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
 
+        <android.support.v7.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/rv"
+            />
 
         <android.support.v7.widget.CardView
             android:id="@+id/card_view"
@@ -29,6 +24,7 @@
             card_view:cardCornerRadius="2dp">
 
             <ImageView
+                android:id="@+id/urgency_indicator"
                 android:src="@drawable/urgency_indicator"
                 android:layout_width="10dp"
                 android:layout_height="match_parent"
@@ -75,6 +71,7 @@
                     android:layout_alignParentTop="true"
                     android:layout_alignParentEnd="true"
                     android:layout_margin="5dp" />
+
                 <ImageView
                     android:id="@+id/design_approval"
                     android:src="@drawable/tshirt_icon"
@@ -83,38 +80,65 @@
                     android:layout_alignTop="@+id/design_approval_checkbox"
                     android:layout_alignStart="@+id/invoice_approval" />
 
+    <!--========================Row One=============================-->
                 <TextView
-                    android:id="@+id/textView2"
-                    android:text="Order#: 523762723"
+                    android:id="@+id/label_order_number"
+                    android:text="Order #: "
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
                     android:layout_alignParentTop="true"
-                    android:layout_alignStart="@+id/textView"
+                    android:layout_alignStart="@+id/Quantity"
                     android:textSize="16sp"
                     android:textStyle="normal|bold" />
 
+                    <TextView
+                        android:text="1234567890"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@+id/label_order_number"
+                        android:layout_toEndOf="@+id/label_order_number"
+                        android:id="@+id/order_number"
+                        android:textSize="16sp"
+                        android:textStyle="normal|bold" />
+
+    <!--========================Row Two=============================-->
                 <TextView
                     android:text="Quantity: 100"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/textView"
-                    android:layout_below="@+id/textView2"
+                    android:id="@+id/Quantity"
+                    android:layout_below="@+id/label_order_number"
                     android:layout_centerHorizontal="true" />
 
+                    <TextView
+                        android:text="TextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_above="@+id/textView3"
+                        android:layout_toEndOf="@+id/Quantity"
+                        android:id="@+id/textView2" />
+
+    <!--========================Row Three=============================-->
                 <TextView
-                    android:text="Some kind of details"
+                    android:text="Item Details: "
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/textView3"
-                    android:layout_below="@+id/textView"
-                    android:layout_alignStart="@+id/textView" />
+                    android:layout_below="@+id/Quantity"
+                    android:layout_alignStart="@+id/Quantity" />
+
+                    <TextView
+                        android:text="Aditional Information"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textView10"
+                        android:layout_below="@+id/textView2"
+                        android:layout_toEndOf="@+id/textView3" />
 
             </RelativeLayout>
-
 
         </android.support.v7.widget.CardView>
 
 
     </LinearLayout>
-</ScrollView>

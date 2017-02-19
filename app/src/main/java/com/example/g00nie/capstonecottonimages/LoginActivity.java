@@ -67,7 +67,7 @@ public class LoginActivity extends AppCompatActivity {
         if(valid = true){
             Toast.makeText(LoginActivity.this,      //Login Successful Toast
                     "Login Successful", Toast.LENGTH_LONG).show();
-            Intent intent = new Intent(LoginActivity.this, SplashScreenActivity.class);
+            Intent intent = new Intent(LoginActivity.this, OrderViewerActivity.class);
             startActivity(intent);
         }
     }

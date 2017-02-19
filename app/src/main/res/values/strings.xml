@@ -26,6 +26,10 @@
     <string name="dueDate">Due Date</string>
     <string name="notes">Notes</string>
     <string name="approvedStatus">Approved Status</string>
+    <string name="design_name">Design Name:</string>
+    <string name="design_id">Design #:</string>
+    <string name="version_number">Version #:</string>
+    <string name="version_name">Version Name:</string>
 
 
 </resources>
